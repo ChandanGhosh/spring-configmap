@@ -1,0 +1,13 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: spring-configmap
+      docker:
+        dockerfile: Dockerfile
+  local: {}
+deploy:
+  kubectl:
+    manifests:
+      - k8s/config.yaml
+      - k8s/deploy.yaml

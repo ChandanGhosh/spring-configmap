@@ -1,0 +1,28 @@
+management:
+    endpoint:
+        health:
+            enabled: true
+        info:
+            enabled: true
+        restart:
+            enabled: true
+spring:
+    application:
+        name: spring-configmap
+    cloud:
+        kubernetes:
+            config:
+                enabled: true
+                name: ${spring.application.name}
+#                namespace: default
+            # secrets:
+            #     enabled: true
+            #     name: ${spring.application.name}-secret
+            #     namespace: default
+            #     paths: /etc/secret
+            reload:
+                enabled: true
+                # monitoring-secrets: true
+                # mode: event
+                # strategy: refresh
+            
