@@ -18,7 +18,7 @@ docker build --force-rm -t spring-configmap
 
 ```
 
-* Load in your cluster. I have used Kind for this demo. So to load in Kind, you can:
+* Load in your cluster. I have used [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/) for this demo. So to load in Kind, you can:
 
 ```
 
